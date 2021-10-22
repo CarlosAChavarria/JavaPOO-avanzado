@@ -1,12 +1,12 @@
 package com.company;
 
-import bank.CuentaBancaria;
-import ejercicio1.Person;
-import javafx.scene.transform.Scale;
-
-import java.util.Scanner;
-
 public class Main{
+
+    // manejo de ecepciones
+    // variables
+    public static int numerador = 10;
+    public static int denominador = 0;
+    public static int division;
 
     public static void main(String[] args) {
         /*
@@ -15,9 +15,9 @@ public class Main{
         Persona.edad = 23;
 
         Animal animal = new Animal();
-        animal.nombre = "lomito";*/
+        animal.nombre = "lomito";
 
-        /*Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         CuentaBancaria cuenta1 = new CuentaBancaria("Carlos", 0001, 15650);
         System.out.println("Datos actuales:");
         System.out.println(cuenta1.getMostrarName());
@@ -36,7 +36,7 @@ public class Main{
         System.out.println("Datos actulizados : ");
         System.out.println(cuenta1.getMostrarName());
         System.out.println(cuenta1.getMostrarKey());
-        System.out.println(cuenta1.getMostrarSaldo() + "\n");*/
+        System.out.println(cuenta1.getMostrarSaldo() + "\n");
 
         Person person1 = new Person("Carlos", 23, "2014080265");
         Scanner sc = new Scanner(System.in);
@@ -57,6 +57,15 @@ public class Main{
         person1.setId(newSaldo);
 
         System.out.println("\nDatos actualizados : \n");
-        System.out.println(person1.getName() + "\n" + person1.getAge() + "\n" + person1.getId());
+        System.out.println(person1.getName() + "\n" + person1.getAge() + "\n" + person1.getId());*/
+
+        // manejo de ecepciones
+        System.out.println("Antes de hacer la división");
+        try{
+            division = numerador / denominador;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        System.out.println("Despues de hacer la división");
     }
 }
